@@ -4,17 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SanCosta Persianas</title>
-    <meta name="description" content="SanCosta Persianas: soluções em persianas e cortinas para ambientes corporativos e hospitalares. Qualidade, excelência e comprometimento há mais de 6 anos." />
+    <meta name="description" content="Na SanCosta, redefinimos ambientes residenciais e corporativos com uma combinação perfeita de design elegante, durabilidade excepcional e atendimento personalizado.
+    Desde a seleção criteriosa dos materiais até a instalação especializada, garantimos uma jornada envolvente e precisa — cada etapa é ministrada com atenção minuciosa aos detalhes. 
+    O resultado? Espaços com identidade única, aliando conforto, funcionalidade e requinte em cada superfície." />
     <meta name="keywords" content="persianas, cortinas, persianas hospitalares, persianas blackout, persianas corporativas, sancosta, cortinas para escritório" />
     <meta name="author" content="SanCosta Persianas" />
     <meta property="og:title" content="SanCosta Persianas" />
     <meta property="og:description" content="Soluções em Persianas e Cortinas para Empresas e Hospitais. Qualidade, excelência e comprometimento." />
-    <meta property="og:image" content="https://www.seusite.com.br/assents/logo_com_letra.png" />
+    <meta property="og:image" content="https://www.seusite.com.br/assets/logo_com_letra.png" />
     <meta property="og:url" content="https://www.seusite.com.br" />
     <meta name="robots" content="index, follow" />
+    <link rel="icon" href="./assets/logo_sem_letra_ico.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" href="./assents/logo_sem_letra_ico.ico" type="image/x-icon">
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
       .fade-in {
         opacity: 0;
         transform: translateY(20px);
@@ -28,135 +33,130 @@
       }
     </style>
   </head>
-  <body class="font-sans bg-gray-50">
+  <body class="font-sans bg-gray-50 min-h-screen flex flex-col">
     <!-- Navbar -->
-<header id="main-header" class="bg-[#004A99] shadow sticky top-0 z-50 transition duration-300">
+    <header id="main-header" class="bg-[#004A99] shadow sticky top-0 z-50 transition duration-300">
       <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        <div class="flex items-center space-x-2">
-          <img src="assents/logo_com_letra.png" alt="Logo SanCosta Persianas" class="h-12 w-40" />
-        </div>
-        <!-- Menu desktop -->
+        <img src="assets/logo_com_letra.png" alt="Logo SanCosta Persianas" class="h-12 w-40" loading="lazy" />
         <nav class="hidden md:flex space-x-6 text-white">
           <a href="#" class="hover:text-orange-400">Home</a>
-          <a href="#" class="hover:text-orange-400">Produtos</a>
-          <a href="#" class="hover:text-orange-400">Sobre</a>
-          <a href="#" class="hover:text-orange-400">Clientes</a>
+          <a href="#produtos" class="hover:text-orange-400">Produtos</a>
+          <a href="#sobre" class="hover:text-orange-400">Sobre</a>
+          <a href="#clientes" class="hover:text-orange-400">Clientes</a>
         </nav>
-        <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded hidden md:inline-block">
-          Solicitar Orçamento
-        </a>
-        <!-- Botão menu hamburguer para mobile -->
-        <button id="menu-btn" class="md:hidden text-white text-3xl focus:outline-none">
-          ☰
-        </button>
+        <a href="https://wa.me/5511962113593?text=Ol%C3%A1!%20%F0%9F%91%8B%20Estou%20interessado(a)%20em%20solicitar%20um%20or%C3%A7amento%20personalizado%20para%20as%20persianas%20da%20SanCosta.%0APoderiam%20me%20ajudar%20com%20mais%20informa%C3%A7%C3%B5es%20e%20pre%C3%A7os%3F%0AObrigado(a)!" target="_blank" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded hidden md:inline-block">Solicitar Orçamento</a>
+        <button id="menu-btn" class="md:hidden text-white text-3xl focus:outline-none">☰</button>
       </div>
-    
-      <!-- Menu mobile: aparece somente em mobile -->
       <div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-2 bg-[#004A99] px-4 py-4">
         <nav class="flex flex-col space-y-2 text-white">
           <a href="#" class="hover:text-orange-400">Home</a>
-          <a href="#" class="hover:text-orange-400">Produtos</a>
-          <a href="#" class="hover:text-orange-400">Sobre</a>
-          <a href="#" class="hover:text-orange-400">Clientes</a>
+          <a href="#produtos" class="hover:text-orange-400">Produtos</a>
+          <a href="#sobre" class="hover:text-orange-400">Sobre</a>
+          <a href="#clientes" class="hover:text-orange-400">Clientes</a>
         </nav>
-        <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded text-center">
-          Solicitar Orçamento
-        </a>
+        <a href="https://wa.me/5511962113593?text=Ol%C3%A1!%20%F0%9F%91%8B%20Estou%20interessado(a)%20em%20solicitar%20um%20or%C3%A7amento%20personalizado%20para%20as%20persianas%20da%20SanCosta.%0APoderiam%20me%20ajudar%20com%20mais%20informa%C3%A7%C3%B5es%20e%20pre%C3%A7os%3F%0AObrigado(a)!" target="_blank" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded hidden md:inline-block" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded text-center">Solicitar Orçamento</a>
       </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="relative bg-[#004A99] text-white">
-      <img src="./assents/persianas-para-escritorios.jpg" alt="Persianas para Escritórios" class="w-full h-[100%] object-cover opacity-50 absolute inset-0" />
-      <div class="relative z-10 max-w-5xl mx-auto px-4 py-24 text-center">
-        <h1 class="text-3xl md:text-5xl font-bold mb-4 fade-in">
-          Soluções em Persianas e Cortinas para Empresas e Hospitais
-        </h1>
-        <p class="text-lg mb-6 fade-in" style="animation-delay: 0.2s">Qualidade, comprometimento e excelência há mais de 6 anos.</p>
-        <div class="space-x-4 fade-in" style="animation-delay: 0.4s">
-          <a href="#" class="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded text-white font-semibold w-[]">Peça um Orçamento</a>
-          <a href="#" class="bg-white text-blue-900 px-6 py-3 rounded font-semibold hover:bg-gray-200">Veja Nossos Projetos</a>
+    <!-- Conteúdo principal -->
+    <main class="flex-grow">
+      <!-- Hero -->
+      <section class="relative bg-[#004A99] text-white">
+        <img src="./assets/persianas-para-escritorios.jpg" alt="Persianas para Escritórios em ambiente corporativo" class="w-full h-full object-cover opacity-50 absolute inset-0" loading="lazy" />
+        <div class="relative z-10 max-w-5xl mx-auto px-4 py-24 text-center">
+          <h1 class="text-3xl md:text-5xl font-bold mb-4 fade-in">Soluções em Persianas e Cortinas para Empresas e Hospitais</h1>
+          <p class="text-lg mb-6 fade-in" style="animation-delay: 0.2s">Qualidade, comprometimento e excelência que transformam ambientes.</p>
+          <div class="flex flex-col gap-4 sm:flex-row sm:justify-center sm:space-x-4 fade-in" style="animation-delay: 0.4s">
+            <a href="https://wa.me/5511962113593?text=Ol%C3%A1!%20%F0%9F%91%8B%20Estou%20interessado(a)%20em%20solicitar%20um%20or%C3%A7amento%20personalizado%20para%20as%20persianas%20da%20SanCosta.%0APoderiam%20me%20ajudar%20com%20mais%20informa%C3%A7%C3%B5es%20e%20pre%C3%A7os%3F%0AObrigado(a)!" target="_blank" class="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded text-white font-semibold">Peça um Orçamento</a>
+            <a href="https://wa.me/5511962113593?text=Oi%2C%20tudo%20bem%3F%20Gostaria%20de%20conhecer%20melhor%20os%20projetos%20realizados%20pela%20SanCosta%20para%20persianas%20residenciais%2C%20hospitalares%20e%20corporativas.%0APode%20me%20enviar%20mais%20detalhes%2C%20por%20favor%3F" target="_blank" class="bg-white text-blue-900 px-6 py-3 rounded font-semibold hover:bg-gray-200">Veja Nossos Projetos</a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Sobre Nós -->
-    <section class="py-16 px-4 max-w-7xl mx-auto">
-    <section id="#sobre">
-      <h2 class="text-3xl font-bold text-center mb-4 fade-in">Sobre Nós</h2>
-      <p class="text-center text-gray-600 mb-10 fade-in">
-        Combinamos design sofisticado, alta durabilidade e atendimento especializado, visando transformar ambientes residenciais e corporativos com elegância e praticidade. Desde a escolha dos materiais até a instalação profissional, asseguramos uma experiência completa e atenta aos mínimos detalhes.
-      </p>
-    </section>
+      <!-- Sobre Nós -->
+      <section id="sobre" class="py-16 px-4 max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-4 fade-in">Sobre Nós</h2>
+        <p class="text-center text-gray-700 mb-10 fade-in">
+          Na SanCosta, redefinimos ambientes residenciais e corporativos com uma combinação perfeita de design elegante, durabilidade excepcional e atendimento personalizado.
+          Desde a seleção criteriosa dos materiais até a instalação especializada, garantimos uma jornada envolvente e precisa — cada etapa é ministrada com atenção minuciosa aos detalhes. 
+          O resultado? Espaços com identidade única, aliando conforto, funcionalidade e requinte em cada superfície.
+        </p>
 
-    
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-white shadow rounded p-4 text-center fade-in">
-        <div class="aspect-[4/3] overflow-hidden rounded mb-4">
-          <img src="./assents/hospitalar.jpeg" class="w-full h-full object-cover" alt="Persianas Hospitalares" />
+        <!-- Produtos -->
+        <div id="produtos" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white shadow rounded p-4 text-center fade-in">
+            <div class="aspect-[4/3] overflow-hidden rounded mb-4">
+              <img src="./assets/hospitalar.jpeg" class="w-full object-cover h-full" alt="Persianas hospitalares instaladas" loading="lazy" />
+            </div>
+            <h3 class="font-bold text-xl mb-2">Persianas Hospitalares</h3>
+            <p class="text-gray-700 mb-4">Segurança e higiene para ambientes de saúde</p>
+            <a href="https://wa.me/5511962113593?text=Ol%C3%A1!%20Vi%20que%20voc%C3%AAs%20t%C3%AAm%20persianas%20especialmente%20desenvolvidas%20para%20hospitais.%0AGostaria%20de%20saber%20mais%20sobre%20as%20op%C3%A7%C3%B5es%2C%20materiais%20e%20vantagens%20das%20Persianas%20Hospitalares%20da%20SanCosta.%0APode%20me%20ajudar%3F" target="_blank" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Saiba Mais</a>
+          </div>
+        
+          <div class="bg-white shadow rounded p-4 text-center fade-in">
+            <div class="aspect-[4/3] overflow-hidden rounded mb-4">
+              <img src="./assets/Persianas-Blackout.webp" class="w-full object-cover h-full" alt="Ambiente com persianas blackout" loading="lazy" />
+            </div>
+            <h3 class="font-bold text-xl mb-2">Persianas Blackout</h3>
+            <p class="text-gray-700 mb-4">Controle total da luz e privacidade</p>
+            <a href="https://wa.me/5511962113593?text=Oi!%20Tenho%20interesse%20nas%20Persianas%20Blackout%20da%20SanCosta%20para%20controlar%20a%20luminosidade%20e%20garantir%20mais%20conforto.%0APoderia%20me%20enviar%20mais%20informa%C3%A7%C3%B5es%20sobre%20modelos%2C%20cores%20e%20instala%C3%A7%C3%A3o%3F" target="_blank" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Saiba Mais</a>
+          </div>
+        
+          <div class="bg-white shadow rounded p-4 text-center fade-in">
+            <div class="aspect-[4/3] overflow-hidden rounded mb-4">
+              <img src="./assets/Persianas_corporativas_sala_de_reunião.jpg" class="w-full object-cover h-full" alt="Sala de reunião com persianas corporativas" loading="lazy" />
+            </div>
+            <h3 class="font-bold text-xl mb-2">Persianas Corporativas</h3>
+            <p class="text-gray-700 mb-4">Estilo e praticidade para empresas</p>
+            <a href="https://wa.me/5511962113593?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20solu%C3%A7%C3%B5es%20de%20persianas%20corporativas%20que%20a%20SanCosta%20oferece%20para%20ambientes%20empresariais.%0AVoc%C3%AAs%20t%C3%AAm%20op%C3%A7%C3%B5es%20personalizadas%20para%20escrit%C3%B3rios%3F%20Me%20conte%20mais%2C%20por%20favor!" target="_blank" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Saiba Mais</a>
+          </div>
         </div>
-        <h3 class="font-bold text-xl mb-2">Persianas Hospitalares</h3>
-        <p class="text-gray-600 mb-4">Segurança e higiene para ambientes de saúde</p>
-        <a href="#" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Saiba Mais</a>
-      </div>
-      <div class="bg-white shadow rounded p-4 text-center fade-in">
-        <div class="aspect-[4/3] overflow-hidden rounded mb-4">
-          <img src="./assents/Persianas-Blackout.webp" class="w-full h-full object-cover" alt="Persianas Blackout" />
-        </div>
-        <h3 class="font-bold text-xl mb-2">Persianas Blackout</h3>
-        <p class="text-gray-600 mb-4">Controle total da luz e privacidade</p>
-        <a href="#" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Saiba Mais</a>
-      </div>
-      <div class="bg-white shadow rounded p-4 text-center fade-in">
-        <div class="aspect-[4/3] overflow-hidden rounded mb-4">
-          <img src="./assents/Persianas_corporativas_sala_de_reunião.jpg" class="w-full h-full object-cover" alt="Persianas Corporativas" />
-        </div>
-        <h3 class="font-bold text-xl mb-2">Persianas Corporativas</h3>
-        <p class="text-gray-600 mb-4">Estilo e praticidade para empresas</p>
-        <a href="#" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Saiba Mais</a>
-      </div>
-  </div>
-    </section>
+      </section>
 
-    <!-- Vantagens -->
-    <section class="bg-white py-16 px-4">
-      <h2 class="text-3xl font-bold text-center mb-10 fade-in">Por que Escolher a SanCosta?</h2>
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
-        <div class="fade-in">
-          <div class="text-blue-900 text-3xl mb-2">💬</div>
-          <h3 class="font-bold text-lg mb-1">Atendimento especializado</h3>
+      <!-- Vantagens -->
+      <section class="bg-white py-16 px-4">
+        <h2 class="text-3xl font-bold text-center mb-10 fade-in">Por que Escolher a SanCosta?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+          <div class="fade-in">
+            <div class="text-blue-900 text-3xl mb-2">💬</div>
+            <h3 class="font-bold text-lg mb-1">Atendimento especializado</h3>
+          </div>
+          <div class="fade-in">
+            <div class="text-blue-900 text-3xl mb-2">📦</div>
+            <h3 class="font-bold text-lg mb-1">Produtos de alto padrão</h3>
+          </div>
+          <div class="fade-in">
+            <div class="text-blue-900 text-3xl mb-2">🚚</div>
+            <h3 class="font-bold text-lg mb-1">Soluções sob medida</h3>
+          </div>
+          <div class="fade-in">
+            <div class="text-blue-900 text-3xl mb-2">🛠️</div>
+            <h3 class="font-bold text-lg mb-1">Garantia e suporte técnico</h3>
+          </div>
         </div>
-        <div class="fade-in">
-          <div class="text-blue-900 text-3xl mb-2">📦</div>
-          <h3 class="font-bold text-lg mb-1">Produtos de alto padrão</h3>
-        </div>
-        <div class="fade-in">
-          <div class="text-blue-900 text-3xl mb-2">🚚</div>
-          <h3 class="font-bold text-lg mb-1">Soluções sob medida</h3>
-        </div>
-        <div class="fade-in">
-          <div class="text-blue-900 text-3xl mb-2">🛠️</div>
-          <h3 class="font-bold text-lg mb-1">Garantia e suporte técnico</h3>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-blue-900 text-white py-8">
-      <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-        <div class="mb-4 md:mb-0">
-          <img src="assents/logo_com_letra.png" class="h-12 w-40" alt="Logo SanCosta" />
-        </div>
+    <footer id="clientes" class="bg-blue-900 text-white py-8 w-full">
+      <div class="max-w-7xl mx-auto px-4 md:px-16 flex flex-col md:flex-row justify-between items-center">
+        <img src="assets/logo_com_letra.png" class="h-12 w-40 mb-4 md:mb-0" alt="Logo SanCosta" loading="lazy" />
         <div class="flex space-x-6 text-sm">
           <a href="#" class="hover:underline">Home</a>
-          <a href="#" class="hover:underline">Produtos</a>
-          <a href="#" class="hover:underline">Sobre</a>
-          <a href="#" class="hover:underline">Clientes</a>
+          <a href="#produtos" class="hover:underline">Produtos</a>
+          <a href="#sobre" class="hover:underline">Sobre</a>
+          <a href="#clientes" class="hover:underline">Clientes</a>
         </div>
       </div>
-      <p class="text-sm text-center mt-4">&copy; 2025 SanCosta. Todos os direitos reservados.</p>
+      <p class="text-sm text-center mt-4 px-4">&copy; 2025 SanCosta. Todos os direitos reservados.</p>
     </footer>
+    
+    <!-- Botão WhatsApp -->
+    <a href="https://wa.me/5511962113593?text=Ol%C3%A1%2C%20equipe%20SanCosta!%20Gostaria%20de%20falar%20com%20voc%C3%AAs%20para%20tirar%20algumas%20d%C3%BAvidas%20e%20receber%20orienta%C3%A7%C3%B5es%20sobre%20as%20persianas%20ideais%20para%20meu%20ambiente.%0APoderiam%20me%20ajudar%3F" target="_blank" class="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg z-50 hover:bg-green-600">
+      Fale Conosco
+    </a>
 
+    <!-- Scripts -->
     <script>
       const menuBtn = document.getElementById('menu-btn');
       const mobileMenu = document.getElementById('mobile-menu');
@@ -164,13 +164,12 @@
       menuBtn.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
       });
-      const header = document.getElementById('main-header');
 
+      const header = document.getElementById('main-header');
       window.addEventListener('scroll', () => {
         const scrollY = window.scrollY;
-        const maxScroll = 200; // quanto de scroll até opacidade mínima
-        const opacity = Math.max(0.7, 1 - scrollY / maxScroll); // nunca vai abaixo de 0.7
-
+        const maxScroll = 200;
+        const opacity = Math.max(0.7, 1 - scrollY / maxScroll);
         header.style.backgroundColor = `rgba(0, 74, 153, ${opacity})`;
       });
     </script>
