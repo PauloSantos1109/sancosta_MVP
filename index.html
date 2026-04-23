@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sancosta Engenharia — Gestão Estratégica de Ativos Térmicos. Manutenção preventiva, PMOC, eficiência energética e engenharia especializada." />
+  <title>Sancosta Engenharia | Gestão de Ativos Térmicos</title>
+
+
+  <link rel="icon" type="image/jpeg" href="./src/icon.jpeg" />
+  <link rel="apple-touch-icon" href="./src/icon.jpeg" />
+
+  <!-- Fontes: Outfit (display sem esticamento) + DM Sans (corpo) -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- AIRFLOW BACKGROUND -->
+<div id="airBox"></div>
+
+<!-- ══ HEADER ══════════════════════════════════════════════ -->
+<header>
+  <a href="#home" class="logo-wrap">
+    <!-- Logo completa (ícone S + texto SANCOSTA ENGENHARIA) -->
+    <img
+      src="./src/logo_sem_fundo.png"
+      alt="Sancosta Engenharia"
+      class="logo-img"
+      style="height:90px;"
+    />
+  </a>
+
+  <nav class="desktop">
+    <a href="#solucoes">Soluções</a>
+    <a href="#engenharia">Engenharia</a>
+    <a href="#pmoc">PMOC</a>
+    <a href="#calculadora">Simulador BTU</a>
+  </nav>
+
+  <div class="header-actions">
+    <button class="btn-theme" id="themeToggle" aria-label="Alternar tema">
+      <i data-lucide="sun"  id="iconSun"  style="display:none;width:16px;height:16px"></i>
+      <i data-lucide="moon" id="iconMoon" style="width:16px;height:16px"></i>
+    </button>
+    <a href="https://wa.me/5511940629488" class="btn btn-primary btn-sm">
+      <i data-lucide="calendar" style="width:14px;height:14px"></i> Diagnóstico
+    </a>
+  </div>
+</header>
+
+<div class="page-wrap">
+
+  <!-- ══ HERO ═══════════════════════════════════════════════ -->
+  <section id="home" class="hero">
+    <div class="hero-eyebrow reveal">
+      <div class="chip"><span class="chip-dot"></span>Sancosta Engenharia</div>
+    </div>
+
+    <h1 class="reveal" style="transition-delay:.08s">
+      Gestão Estratégica de<br>
+      <span class="gradient-text">Ativos Térmicos</span>
+    </h1>
+
+    <p class="hero-sub reveal" style="transition-delay:.16s">
+      Continuidade operacional, eficiência energética e conformidade normativa
+      para grandes operações industriais.
+    </p>
+
+    <div class="hero-ctas reveal" style="transition-delay:.24s">
+      <a href="https://wa.me/5511940629488" class="btn btn-primary">
+        <i data-lucide="message-circle" style="width:16px;height:16px"></i>
+        Solicitar Diagnóstico Gratuito
+      </a>
+      <a href="#solucoes" class="btn btn-ghost">Conheça nossas soluções</a>
+    </div>
+
+    <div class="hero-stats reveal" style="transition-delay:.32s">
+      <div class="stat">
+        <div class="stat-num">98%</div>
+        <div class="stat-label">Uptime garantido</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">25%</div>
+        <div class="stat-label">Redução de energia</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">NR10</div>
+        <div class="stat-label">Técnicos certificados</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SOLUÇÕES ════════════════════════════════════════════ -->
+  <section id="solucoes">
+    <div class="section-header reveal">
+      <p class="accent-line">Nossas Soluções</p>
+      <h2>Não vendemos horas técnicas.<br>Vendemos disponibilidade.</h2>
+      <p class="section-sub">Cada ativo térmico da sua operação exige atenção específica. Atuamos para eliminar paradas não programadas e reduzir custos de energia.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card reveal">
+        <div class="card-icon"><i data-lucide="clipboard-list" style="width:22px;height:22px"></i></div>
+        <h3 class="card-title">Inventário & Diagnóstico</h3>
+        <p class="card-text">Mapeamento técnico completo. Identificamos riscos e pontos de falha antes que virem problema.</p>
+      </div>
+      <div class="card reveal" style="transition-delay:.08s">
+        <div class="card-icon"><i data-lucide="shield-check" style="width:22px;height:22px"></i></div>
+        <h3 class="card-title">Manutenção Preventiva (PMOC)</h3>
+        <p class="card-text">Plano estruturado conforme a Lei 13.589/18. Garantimos conformidade legal absoluta.</p>
+      </div>
+      <div class="card reveal" style="transition-delay:.16s">
+        <div class="card-icon"><i data-lucide="zap" style="width:22px;height:22px"></i></div>
+        <h3 class="card-title">Eficiência Energética</h3>
+        <p class="card-text">Reduzimos consumo de energia elétrica através de otimização de sistemas e retrofit inteligente.</p>
+      </div>
+      <div class="card reveal" style="transition-delay:.24s">
+        <div class="card-icon"><i data-lucide="activity" style="width:22px;height:22px"></i></div>
+        <h3 class="card-title">Monitoramento Contínuo</h3>
+        <p class="card-text">Sensores e dashboards em tempo real para gestão proativa da saúde dos seus ativos.</p>
+      </div>
+      <div class="card reveal" style="transition-delay:.32s">
+        <div class="card-icon"><i data-lucide="wrench" style="width:22px;height:22px"></i></div>
+        <h3 class="card-title">Manutenção Corretiva</h3>
+        <p class="card-text">Resposta rápida com equipes especializadas homologadas. Mobilização em até 4 horas úteis.</p>
+      </div>
+      <div class="card reveal" style="transition-delay:.40s">
+        <div class="card-icon"><i data-lucide="file-text" style="width:22px;height:22px"></i></div>
+        <h3 class="card-title">Laudos & Relatórios</h3>
+        <p class="card-text">Documentação técnica completa para auditorias, licenças e rastreabilidade da manutenção.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ ENGENHARIA ══════════════════════════════════════════ -->
+  <section id="engenharia">
+    <div class="two-col">
+      <div class="reveal">
+        <p class="accent-line">Engenharia de Resposta</p>
+        <h2>Mobilização Sob Demanda</h2>
+        <p class="engenharia-desc">
+          Mantemos um ecossistema de especialistas homologados para montar frentes de trabalho
+          personalizadas. Você paga pela especialização, sem estrutura inflada.
+        </p>
+        <ul class="feature-list">
+          <li><i data-lucide="check-circle" style="width:18px;height:18px"></i><span>Curadoria Técnica de Especialistas</span></li>
+          <li><i data-lucide="check-circle" style="width:18px;height:18px"></i><span>Gestão Direta e Responsabilidade Sancosta</span></li>
+          <li><i data-lucide="check-circle" style="width:18px;height:18px"></i><span>Disciplinas: Mecânica, Elétrica e Civil</span></li>
+          <li><i data-lucide="check-circle" style="width:18px;height:18px"></i><span>Mobilização em até 4 horas úteis</span></li>
+        </ul>
+      </div>
+
+      <div class="reveal" style="transition-delay:.15s">
+        <div class="feature-card">
+          <div class="feature-card-inner">
+            <div class="card-icon" style="margin-bottom:14px">
+              <i data-lucide="award" style="width:22px;height:22px"></i>
+            </div>
+            <h3 class="card-title nr10-title">Certificação NR-10</h3>
+            <p class="card-text nr10-text">100% dos nossos técnicos possuem formação em Segurança em Eletricidade, com cumprimento rigoroso das normas de segurança do trabalho.</p>
+          </div>
+          <div class="feature-highlight">
+            <p>💡 Cada técnico é pré-selecionado e auditado pela Sancosta antes de qualquer atuação em campo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PMOC ═══════════════════════════════════════════════ -->
+  <section id="pmoc">
+    <div class="pmoc-wrap reveal">
+      <p class="accent-line">PMOC</p>
+      <h2>Conformidade que protege sua operação</h2>
+      <p class="text-accent fw-700" style="font-size:.9rem">Obrigação legal. Vantagem operacional.</p>
+      <p class="text-sec" style="font-size:.9rem;margin-top:16px;max-width:680px">
+        O Plano de Manutenção é exigido pela Lei 13.589/18. Na Sancosta, entregamos da
+        documentação à execução periódica com monitoramento da qualidade do ar.
+      </p>
+
+      <div class="callout">
+        <div class="callout-icon"><i data-lucide="alert-triangle" style="width:18px;height:18px"></i></div>
+        <p>Ambientes sem PMOC estão sujeitos a <strong>multas, interdição e responsabilização legal</strong>. Regularize sua situação com quem entende do assunto.</p>
+      </div>
+
+      <div class="pmoc-btns">
+        <a href="https://wa.me/5511940629488" class="btn btn-primary">
+          <i data-lucide="message-circle" style="width:16px;height:16px"></i>
+          Falar sobre PMOC
+        </a>
+        <a href="#calculadora" class="btn btn-ghost">
+          <i data-lucide="calculator" style="width:16px;height:16px"></i>
+          Simular Capacidade
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CALCULADORA ════════════════════════════════════════ -->
+  <section id="calculadora">
+    <div class="section-header reveal">
+      <p class="accent-line">Simulador Técnico</p>
+      <h2>Calcule a Capacidade BTU Ideal</h2>
+      <p class="section-sub">Estime a potência de climatização necessária para sua operação. Dados aproximados — diagnóstico preciso com nossa equipe.</p>
+    </div>
+
+    <div class="calc-wrap reveal">
+      <div class="calc-grid">
+        <div class="form-field">
+          <label class="form-label" for="sqm">Área do ambiente (m²)</label>
+          <input type="number" id="sqm" placeholder="Ex: 200" oninput="calcBTU()" min="1" />
+        </div>
+        <div class="form-field">
+          <label class="form-label" for="ppl">Nº de pessoas</label>
+          <input type="number" id="ppl" placeholder="Ex: 15" oninput="calcBTU()" min="0" />
+        </div>
+        <div class="form-field">
+          <label class="form-label" for="type">Tipo de ambiente</label>
+          <select id="type" onchange="calcBTU()">
+            <option value="600">Escritório Comercial</option>
+            <option value="900">Sala de Servidores (TI)</option>
+            <option value="1200">Indústria / Maquinário</option>
+            <option value="750">Laboratório</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label class="form-label" for="sun">Incidência solar</label>
+          <select id="sun" onchange="calcBTU()">
+            <option value="1.0">Sem janelas / sombra total</option>
+            <option value="1.1">Janelas com proteção</option>
+            <option value="1.2" selected>Sol direto parcial</option>
+            <option value="1.35">Sol direto intenso</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="calc-result">
+        <div class="btu-number" id="btu-result">— BTU/h</div>
+        <div class="tr-number"  id="tr-result">Preencha os dados acima</div>
+        <a href="#" id="waReport" class="btn btn-wa w-full" onclick="sendWA(event)">
+          <i data-lucide="send" style="width:16px;height:16px"></i>
+          Enviar Relatório para Guilherme
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SOBRE ═══════════════════════════════════════════════ -->
+  <section id="sobre" class="sobre-section">
+    <div class="section-header reveal">
+      <p class="accent-line">Quem Somos</p>
+      <h2>Parceiro Estratégico da sua Operação</h2>
+    </div>
+
+    <p class="sobre-desc reveal">
+      A Sancosta Engenharia foi criada para resolver um problema real: grandes operações
+      não podem depender de manutenção reativa. Somos parceiros estratégicos que cuidam
+      do coração da sua operação.
+    </p>
+
+    <div class="quote-wrap reveal">
+      <div class="quote-inner">
+        <blockquote>"O sistema térmico é o coração da sua operação.<br>Nós cuidamos dele."</blockquote>
+        <p style="margin-top:14px;font-size:.85rem;color:var(--txt-muted)">
+          — Guilherme Costa, Diretor Estratégico
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CONTATO ═════════════════════════════════════════════ -->
+  <section id="contato" class="contato-section">
+    <div class="section-header reveal">
+      <p class="accent-line">Contato</p>
+      <h2>Pronto para tirar a preocupação<br>térmica da sua agenda?</h2>
+      <p class="section-sub">
+        O primeiro passo é uma conversa de 15 minutos. Diagnóstico técnico completo
+        e mapeamento de oportunidades na sua operação.
+      </p>
+    </div>
+
+    <div class="contact-card reveal">
+      <div class="contact-avatar">GC</div>
+      <p class="contact-label">Fale com o Diretor</p>
+      <h3 class="contact-name">Guilherme Costa</h3>
+      <p class="contact-role">Diretor Estratégico · Sancosta Engenharia</p>
+
+      <a href="https://wa.me/5511940629488" class="btn btn-primary w-full">
+        <i data-lucide="calendar" style="width:16px;height:16px"></i>
+        Agendar Diagnóstico Gratuito
+      </a>
+      <a href="https://wa.me/5511940629488" class="btn btn-wa w-full mt-10">
+        <i data-lucide="message-circle" style="width:16px;height:16px"></i>
+        Chamar no WhatsApp
+      </a>
+      <p class="contact-email">comercial@sancosta.com.br</p>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ══════════════════════════════════════════════ -->
+  <footer>
+    <p>© 2025 Sancosta Engenharia · Todos os direitos reservados.</p>
+    <p class="mt-4">Desenvolvido com excelência para grandes operações.</p>
+  </footer>
+
+</div><!-- /page-wrap -->
+
+<!-- ══ MOBILE NAV ══════════════════════════════════════════ -->
+<nav class="nav-mobile" role="navigation" aria-label="Navegação principal">
+  <a href="#home"       class="nav-item active">
+    <i data-lucide="home"          style="width:20px;height:20px"></i><span>Home</span>
+  </a>
+  <a href="#solucoes"   class="nav-item">
+    <i data-lucide="grid"          style="width:20px;height:20px"></i><span>Soluções</span>
+  </a>
+  <a href="#calculadora" class="nav-item">
+    <i data-lucide="calculator"    style="width:20px;height:20px"></i><span>BTU</span>
+  </a>
+  <a href="#pmoc"       class="nav-item">
+    <i data-lucide="shield-check"  style="width:20px;height:20px"></i><span>PMOC</span>
+  </a>
+  <a href="https://wa.me/5511940629488" class="nav-item" style="color:#22C55E">
+    <i data-lucide="phone"         style="width:20px;height:20px"></i><span>Contato</span>
+  </a>
+</nav>
+
+<!-- JavaScript externo -->
+<script src="main.js"></script>
+</body>
+</html>
