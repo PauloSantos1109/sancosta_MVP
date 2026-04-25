@@ -938,3 +938,586 @@ footer {
   .header-actions .btn-sm { display: none; }
   body { padding-bottom: 100px; }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   CARROSSEL DE PRODUTOS — Sistemas de Climatização
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Seção wrapper ───────────────────────────────────────── */
+.produtos-section {
+  overflow: hidden;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 100%;
+}
+
+.produtos-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+/* ── Track: faixa deslizante ─────────────────────────────── */
+.carousel-viewport {
+  position: relative;
+  margin-top: 40px;
+  overflow: hidden;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.carousel-viewport:active { cursor: grabbing; }
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.55s cubic-bezier(0.25, 1, 0.35, 1);
+  will-change: transform;
+  padding: 12px 5% 28px;
+}
+
+/* ── Card do produto ─────────────────────────────────────── */
+.prod-card {
+  flex: 0 0 260px;
+  border-radius: 24px;
+  border: 1px solid var(--border-subtle);
+  background: var(--card-bg);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+              box-shadow 0.4s,
+              border-color 0.3s;
+  position: relative;
+}
+
+.prod-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--glow-pri);
+  border-color: rgba(56, 189, 248, 0.5);
+}
+
+.prod-card.active-card {
+  border-color: var(--s-400);
+  box-shadow: var(--glow-pri);
+}
+
+/* Imagem do card */
+.prod-img-wrap {
+  width: 100%;
+  height: 168px;
+  background: var(--bg-elevated);
+  position: relative;
+  overflow: hidden;
+}
+
+.prod-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.prod-card:hover .prod-img-wrap img {
+  transform: scale(1.07);
+}
+
+/* Placeholder: fica atrás da imagem (position absolute) */
+/* Só aparece visualmente se a img falhar (tratado via JS) */
+.prod-img-placeholder {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(145deg, var(--bg-elevated), var(--bg-surface));
+  z-index: 0;
+}
+
+/* Quando imagem falha, esconde a img e mostra placeholder */
+.prod-img-wrap.img-error img {
+  display: none;
+}
+
+.prod-img-wrap.img-error .prod-img-placeholder {
+  z-index: 1;
+}
+
+.prod-img-placeholder svg {
+  color: var(--s-400);
+  opacity: 0.7;
+}
+
+.prod-img-placeholder span {
+  font-size: 0.7rem;
+  color: var(--txt-muted);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Badge de categoria no canto */
+.prod-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(14, 165, 233, 0.18);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--s-400);
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+/* Ícone "ver mais" */
+.prod-expand-icon {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--s-400);
+  transition: 0.3s;
+}
+
+.prod-card:hover .prod-expand-icon {
+  background: var(--s-400);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Conteúdo textual do card */
+.prod-body {
+  padding: 18px 20px 20px;
+}
+
+.prod-name {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--txt-pri);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.prod-tagline {
+  font-size: 0.78rem;
+  color: var(--txt-muted);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.prod-cta-hint {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--s-400);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ── Controles ───────────────────────────────────────────── */
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 28px;
+  padding-bottom: 4px;
+}
+
+.carousel-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border-default);
+  background: var(--card-bg);
+  color: var(--txt-pri);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.25s;
+  flex-shrink: 0;
+}
+
+.carousel-btn:hover {
+  background: var(--s-400);
+  border-color: var(--s-400);
+  color: #fff;
+  box-shadow: var(--glow-pri);
+  transform: scale(1.08);
+}
+
+.carousel-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Dots de paginação */
+.carousel-dots {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--border-default);
+  transition: 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+}
+
+.dot.active {
+  width: 22px;
+  background: var(--s-400);
+  box-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
+}
+
+/* Barra de progresso automático */
+.carousel-progress {
+  height: 2px;
+  background: var(--border-subtle);
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 0 5%;
+  margin-top: 16px;
+}
+
+.carousel-progress-bar {
+  height: 100%;
+  background: var(--grad-airflow);
+  border-radius: 999px;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+/* ── MODAL / POPUP ───────────────────────────────────────── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 9000;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s;
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Modal como bottom-sheet no mobile, centered no desktop */
+.modal-sheet {
+  background: var(--bg-surface);
+  border-radius: 28px 28px 0 0;
+  width: 100%;
+  max-width: 100%;
+  max-height: 90svh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  transform: translateY(100%);
+  transition: transform 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+}
+
+.modal-overlay.open .modal-sheet {
+  transform: translateY(0);
+}
+
+/* Handle de drag no mobile */
+.modal-handle {
+  width: 40px;
+  height: 4px;
+  background: var(--border-default);
+  border-radius: 999px;
+  margin: 14px auto 0;
+}
+
+/* Header do modal */
+.modal-head {
+  padding: 20px 24px 0;
+}
+
+.modal-img-wrap {
+  width: 100%;
+  height: 200px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--bg-elevated);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.modal-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-img-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(145deg, var(--bg-elevated), var(--bg-surface));
+}
+
+.modal-img-placeholder svg { color: var(--s-400); }
+
+.modal-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: var(--grad-premium);
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+
+/* Título do modal */
+.modal-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--txt-pri);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+/* Subtítulo/indicador */
+.modal-sub {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--s-400);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+/* Corpo do modal */
+.modal-body {
+  padding: 0 24px 24px;
+}
+
+.modal-desc {
+  font-size: 0.95rem;
+  color: var(--txt-sec);
+  line-height: 1.75;
+  margin-bottom: 24px;
+}
+
+.modal-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.modal-feat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--txt-pri);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+}
+
+.modal-feat-item svg { color: var(--s-400); flex-shrink: 0; }
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+/* Botão fechar */
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-default);
+  color: var(--txt-sec);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.25s;
+  z-index: 10;
+}
+
+.modal-close:hover {
+  background: var(--error);
+  border-color: var(--error);
+  color: #fff;
+}
+
+/* Navegação entre produtos no modal */
+.modal-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px 20px;
+  border-top: 1px solid var(--border-subtle);
+  margin-top: 4px;
+  padding-top: 16px;
+}
+
+.modal-nav-info {
+  font-size: 0.75rem;
+  color: var(--txt-muted);
+  font-weight: 600;
+}
+
+.modal-nav-btns {
+  display: flex;
+  gap: 8px;
+}
+
+.modal-nav-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border-default);
+  background: var(--card-bg);
+  color: var(--txt-pri);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.modal-nav-btn:hover {
+  background: var(--s-400);
+  border-color: var(--s-400);
+  color: #fff;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (min-width: 640px) {
+  .prod-card { flex: 0 0 280px; }
+  .prod-img-wrap { height: 180px; }
+}
+
+@media (min-width: 900px) {
+  .prod-card     { flex: 0 0 300px; }
+  .prod-img-wrap { height: 192px; }
+
+  .modal-overlay {
+    align-items: center;
+    padding: 24px;
+  }
+
+  .modal-sheet {
+    border-radius: 28px;
+    max-width: 560px;
+    max-height: 85svh;
+    transform: translateY(24px) scale(0.97);
+  }
+
+  .modal-overlay.open .modal-sheet {
+    transform: translateY(0) scale(1);
+  }
+
+  .modal-handle { display: none; }
+
+  .modal-img-wrap  { height: 240px; }
+  .modal-title     { font-size: 1.75rem; }
+  .modal-actions   { flex-direction: row; }
+  .modal-actions .btn { flex: 1; }
+}
+
+/* ── Modal: ícone badge no canto inferior direito da imagem ── */
+.modal-icon-badge {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(14, 165, 233, 0.20);
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--s-400);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.25);
+}
+
+/* Modal img fora do modal-head — ocupa topo sem padding */
+#prodModal .modal-img-wrap {
+  border-radius: 0;
+  margin-bottom: 0;
+  width: 100%;
+  height: 220px;
+}
+
+#prodModal .modal-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* modal-head agora só tem texto */
+#prodModal .modal-head {
+  padding: 20px 24px 0;
+}
+
+@media (min-width: 900px) {
+  #prodModal .modal-img-wrap {
+    border-radius: 28px 28px 0 0;
+    height: 260px;
+  }
+}

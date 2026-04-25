@@ -6,9 +6,9 @@
   <meta name="description" content="Sancosta Engenharia — Gestão Estratégica de Ativos Térmicos. Manutenção preventiva, PMOC, eficiência energética e engenharia especializada." />
   <title>Sancosta Engenharia | Gestão de Ativos Térmicos</title>
 
-
-  <link rel="icon" type="image/jpeg" href="./src/icon.jpeg" />
-  <link rel="apple-touch-icon" href="./src/icon.jpeg" />
+  <!-- Favicon: logo S da Sancosta -->
+  <link rel="icon" type="image/jpeg" href="./src/icon.ico" />
+  <link rel="apple-touch-icon" href="./src/icon.ico" />
 
   <!-- Fontes: Outfit (display sem esticamento) + DM Sans (corpo) -->
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
@@ -29,7 +29,7 @@
   <a href="#home" class="logo-wrap">
     <!-- Logo completa (ícone S + texto SANCOSTA ENGENHARIA) -->
     <img
-      src="./src/logo_sem_fundo.png"
+      src="src/logo_sem_fundo.png"
       alt="Sancosta Engenharia"
       class="logo-img"
       style="height:90px;"
@@ -39,6 +39,7 @@
   <nav class="desktop">
     <a href="#solucoes">Soluções</a>
     <a href="#engenharia">Engenharia</a>
+    <a href="#sistemas">Sistemas</a>
     <a href="#pmoc">PMOC</a>
     <a href="#calculadora">Simulador BTU</a>
   </nav>
@@ -174,6 +175,154 @@
   </section>
 
   <!-- ══ PMOC ═══════════════════════════════════════════════ -->
+
+  <!-- ══ SISTEMAS / CARROSSEL ══════════════════════════════ -->
+  <section id="sistemas" class="produtos-section">
+  <div class="produtos-inner">
+    <div class="section-header reveal">
+      <p class="accent-line">Sistemas que Instalamos</p>
+      <h2>Tecnologia certa para<br>cada desafio térmico</h2>
+      <p class="section-sub">Trabalhamos com toda a linha de sistemas de climatização, do residencial ao industrial. Conheça cada solução.</p>
+    </div>
+  </div>
+
+  <div class="carousel-viewport" id="carouselViewport">
+    <div class="carousel-track" id="carouselTrack">
+
+      <div class="prod-card" data-produto="0">
+        <div class="prod-img-wrap">
+          <img src="src/arcondition_Edit_1_11zon.jpg" alt="Ar-condicionado Split"  onerror="this.closest('.prod-img-wrap').classList.add('img-error')" />
+          <span class="prod-badge">Residencial / Comercial</span>
+          <div class="prod-expand-icon"><i data-lucide="maximize-2" style="width:13px;height:13px"></i></div>
+        </div>
+        <div class="prod-body">
+          <h3 class="prod-name">Ar-condicionado Split</h3>
+          <p class="prod-tagline">Climatização eficiente, silenciosa e com excelente custo-benefício para ambientes de até médio porte.</p>
+          <div class="prod-cta-hint"><i data-lucide="info" style="width:11px;height:11px"></i> Saiba mais</div>
+        </div>
+      </div>
+
+      <div class="prod-card" data-produto="1">
+        <div class="prod-img-wrap">
+          <img src="src/Cassete-K7_2_11zon.jpeg" alt="Ar-condicionado Cassete K7"  onerror="this.closest('.prod-img-wrap').classList.add('img-error')" />
+          <span class="prod-badge">Corporativo</span>
+          <div class="prod-expand-icon"><i data-lucide="maximize-2" style="width:13px;height:13px"></i></div>
+        </div>
+        <div class="prod-body">
+          <h3 class="prod-name">Ar-condicionado Cassete / K7</h3>
+          <p class="prod-tagline">Instalado no teto, distribui o ar em 4 direções. Estética limpa, ideal para ambientes corporativos.</p>
+          <div class="prod-cta-hint"><i data-lucide="info" style="width:11px;height:11px"></i> Saiba mais</div>
+        </div>
+      </div>
+
+      <div class="prod-card" data-produto="2">
+        <div class="prod-img-wrap">
+          <img src="src/Piso-teto_watermark_removed_5_11zon.jpg" alt="Ar-condicionado Piso Teto"  onerror="this.closest('.prod-img-wrap').classList.add('img-error')" />
+          <span class="prod-badge">Amplos / Lojas</span>
+          <div class="prod-expand-icon"><i data-lucide="maximize-2" style="width:13px;height:13px"></i></div>
+        </div>
+        <div class="prod-body">
+          <h3 class="prod-name">Ar-condicionado Piso Teto</h3>
+          <p class="prod-tagline">Alta capacidade, alta versatilidade. Instala no piso ou no teto, ideal para lojas e restaurantes.</p>
+          <div class="prod-cta-hint"><i data-lucide="info" style="width:11px;height:11px"></i> Saiba mais</div>
+        </div>
+      </div>
+
+      <div class="prod-card" data-produto="3">
+        <div class="prod-img-wrap">
+          <img src="src/VRF_watermark_removed_6_11zon.jpg" alt="Sistema VRF"  onerror="this.closest('.prod-img-wrap').classList.add('img-error')" />
+          <span class="prod-badge">Médio / Grande Porte</span>
+          <div class="prod-expand-icon"><i data-lucide="maximize-2" style="width:13px;height:13px"></i></div>
+        </div>
+        <div class="prod-body">
+          <h3 class="prod-name">Ar-condicionado VRF</h3>
+          <p class="prod-tagline">Fluxo de Refrigerante Variável. Controle individual por zona com alta eficiência energética.</p>
+          <div class="prod-cta-hint"><i data-lucide="info" style="width:11px;height:11px"></i> Saiba mais</div>
+        </div>
+      </div>
+
+      <div class="prod-card" data-produto="4">
+        <div class="prod-img-wrap">
+          <img src="src/Chiller_watermark_removed_4_11zon.jpg" alt="Sistema Chiller"  onerror="this.closest('.prod-img-wrap').classList.add('img-error')" />
+          <span class="prod-badge">Industrial / Hospitalar</span>
+          <div class="prod-expand-icon"><i data-lucide="maximize-2" style="width:13px;height:13px"></i></div>
+        </div>
+        <div class="prod-body">
+          <h3 class="prod-name">Chiller</h3>
+          <p class="prod-tagline">Climatização central de alta performance para indústrias, hospitais e shopping centers.</p>
+          <div class="prod-cta-hint"><i data-lucide="info" style="width:11px;height:11px"></i> Saiba mais</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="carousel-progress">
+    <div class="carousel-progress-bar" id="progressBar"></div>
+  </div>
+
+  <div class="carousel-controls">
+    <button class="carousel-btn" id="prevBtn" aria-label="Anterior">
+      <i data-lucide="chevron-left" style="width:18px;height:18px"></i>
+    </button>
+    <div class="carousel-dots" id="carouselDots"></div>
+    <button class="carousel-btn" id="nextBtn" aria-label="Próximo">
+      <i data-lucide="chevron-right" style="width:18px;height:18px"></i>
+    </button>
+  </div>
+</section>
+
+  <!-- MODAL DE PRODUTO -->
+  <div class="modal-overlay" id="prodModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-sheet" id="modalSheet">
+      <div class="modal-handle"></div>
+      <button class="modal-close" id="modalClose" aria-label="Fechar">
+        <i data-lucide="x" style="width:16px;height:16px"></i>
+      </button>
+
+      <!-- Imagem real do produto com ícone no canto inferior direito -->
+      <div class="modal-img-wrap" id="modalImgWrap">
+        <img src="" alt="" id="modalImg" />
+        <span class="modal-badge" id="modalBadge">Sistema</span>
+        <!-- Ícone decorativo canto inferior direito -->
+        <div class="modal-icon-badge" id="modalIconBadge">
+          <i data-lucide="wind" style="width:20px;height:20px" id="modalIcon"></i>
+        </div>
+      </div>
+
+      <!-- Título logo abaixo da imagem -->
+      <div class="modal-head">
+        <p class="modal-sub" id="modalSub">Climatização</p>
+        <h2 class="modal-title" id="modalTitle">Produto</h2>
+      </div>
+
+      <div class="modal-body">
+        <p class="modal-desc" id="modalDesc"></p>
+        <div class="modal-features" id="modalFeatures"></div>
+        <div class="modal-actions">
+          <a href="https://wa.me/5511940629488" class="btn btn-primary" id="modalWaLink">
+            <i data-lucide="message-circle" style="width:16px;height:16px"></i> Solicitar Orçamento
+          </a>
+          <button class="btn btn-ghost" id="modalCloseBtn">
+            <i data-lucide="arrow-left" style="width:16px;height:16px"></i> Voltar
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-nav">
+        <span class="modal-nav-info" id="modalNavInfo">1 de 5</span>
+        <div class="modal-nav-btns">
+          <button class="modal-nav-btn" id="modalPrev" aria-label="Produto anterior">
+            <i data-lucide="chevron-left" style="width:16px;height:16px"></i>
+          </button>
+          <button class="modal-nav-btn" id="modalNext" aria-label="Próximo produto">
+            <i data-lucide="chevron-right" style="width:16px;height:16px"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <section id="pmoc">
     <div class="pmoc-wrap reveal">
       <p class="accent-line">PMOC</p>
